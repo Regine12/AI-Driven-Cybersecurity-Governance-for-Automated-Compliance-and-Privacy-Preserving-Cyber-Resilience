@@ -2,20 +2,21 @@
    AI GOVERNANCE FRAMEWORK - Dashboard App
    ================================================================ */
 
-// Data paths (absolute — works with both dev server and production build)
+// Data paths — uses Vite's BASE_URL for GitHub Pages compatibility
+var BASE = import.meta.env.BASE_URL || '/';
 var DATA_PATHS = {
-  iso27001: '/data/iso27001_requirements.json',
-  nist_csf2: '/data/nist_csf2_requirements.json',
-  cyber_essentials: '/data/cyber_essentials_requirements.json',
-  gdpr: '/data/gdpr_requirements.json',
-  mappings: '/data/control_mappings.json',
-  scenario: '/case_study/scenario.json',
-  rules: '/rules/rule_templates.json',
+  iso27001: BASE + 'data/iso27001_requirements.json',
+  nist_csf2: BASE + 'data/nist_csf2_requirements.json',
+  cyber_essentials: BASE + 'data/cyber_essentials_requirements.json',
+  gdpr: BASE + 'data/gdpr_requirements.json',
+  mappings: BASE + 'data/control_mappings.json',
+  scenario: BASE + 'case_study/scenario.json',
+  rules: BASE + 'rules/rule_templates.json',
   evidence: [
-    '/case_study/evidence/access_control_evidence.json',
-    '/case_study/evidence/incident_response_evidence.json',
-    '/case_study/evidence/data_protection_evidence.json',
-    '/case_study/evidence/risk_assessment_evidence.json'
+    BASE + 'case_study/evidence/access_control_evidence.json',
+    BASE + 'case_study/evidence/incident_response_evidence.json',
+    BASE + 'case_study/evidence/data_protection_evidence.json',
+    BASE + 'case_study/evidence/risk_assessment_evidence.json'
   ]
 };
 

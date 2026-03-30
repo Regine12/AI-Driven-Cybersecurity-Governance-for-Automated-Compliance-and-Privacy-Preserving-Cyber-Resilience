@@ -3,6 +3,7 @@ import path from 'path';
 
 export default defineConfig({
   root: '.',
+  base: '/AI-Driven-Cybersecurity-Governance-for-Automated-Compliance-and-Privacy-Preserving-Cyber-Resilience/',
   build: {
     outDir: 'dist',
   },
