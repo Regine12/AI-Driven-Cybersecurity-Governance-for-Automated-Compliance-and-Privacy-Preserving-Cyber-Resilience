@@ -1,0 +1,41 @@
+{
+  "evidence_id": "EV-AC-001",
+  "control_domain": "Access Control",
+  "related_requirement_ids": ["ISO27001-A8.5", "NIST-PR.AA-01", "CE-AC-01", "GDPR-ART32"],
+  "evidence_type": "authentication_policy",
+  "submitted_date": "2026-03-10",
+  "artefacts": [
+    {
+      "name": "Access Control Policy v2.3",
+      "content_summary": "Organisation-wide access control policy defining role-based access, least-privilege principles, and periodic access reviews. Approved by CISO on 2026-01-15.",
+      "properties": {
+        "policy_approved": true,
+        "last_review_date": "2026-01-15",
+        "review_cycle_months": 12,
+        "covers_rbac": true,
+        "covers_least_privilege": true
+      }
+    },
+    {
+      "name": "MFA Configuration Report",
+      "content_summary": "Multi-factor authentication is enabled for all remote access and privileged accounts. SMS-based MFA used for standard users; hardware tokens for administrators.",
+      "properties": {
+        "mfa_enabled": true,
+        "mfa_coverage_percent": 95,
+        "privileged_accounts_mfa": true,
+        "mfa_method": "hardware_token_and_sms"
+      }
+    },
+    {
+      "name": "Access Log Sample – March 2026",
+      "content_summary": "Sample of 500 access log entries from the centralised identity management system showing login events, role assignments, and access denials.",
+      "properties": {
+        "log_entries_count": 500,
+        "failed_login_ratio": 0.03,
+        "orphaned_accounts_found": 2,
+        "last_access_review_date": "2026-02-28"
+      }
+    }
+  ],
+  "notes": "Synthetic evidence. MFA coverage is 95% — 5% gap relates to legacy OT-adjacent systems pending migration."
+}

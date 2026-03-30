@@ -1,0 +1,94 @@
+{
+  "description": "Cross-standard mapping of selected controls across ISO/IEC 27001:2022, NIST CSF 2.0, Cyber Essentials, and GDPR. Each mapping group links requirements that share a unified governance objective.",
+  "mappings": [
+    {
+      "mapping_id": "MAP-AC-01",
+      "control_domain": "Access Control",
+      "unified_objective": "Ensure only authorised users can access systems and data through secure authentication and access management.",
+      "mapped_requirements": [
+        { "requirement_id": "ISO27001-A8.5", "source_standard": "ISO/IEC 27001:2022", "relationship": "equivalent" },
+        { "requirement_id": "NIST-PR.AA-01", "source_standard": "NIST CSF 2.0", "relationship": "equivalent" },
+        { "requirement_id": "CE-AC-01", "source_standard": "Cyber Essentials", "relationship": "overlapping" },
+        { "requirement_id": "GDPR-ART32", "source_standard": "GDPR", "relationship": "complementary" }
+      ],
+      "notes": "GDPR Article 32 addresses access control as part of security of processing, hence complementary rather than equivalent."
+    },
+    {
+      "mapping_id": "MAP-IR-01",
+      "control_domain": "Incident Response",
+      "unified_objective": "Establish and maintain incident response capabilities, including planning, detection, reporting, and post-incident review.",
+      "mapped_requirements": [
+        { "requirement_id": "ISO27001-A5.24", "source_standard": "ISO/IEC 27001:2022", "relationship": "equivalent" },
+        { "requirement_id": "NIST-RS.MA-01", "source_standard": "NIST CSF 2.0", "relationship": "equivalent" },
+        { "requirement_id": "GDPR-ART33", "source_standard": "GDPR", "relationship": "complementary" }
+      ],
+      "notes": "GDPR Article 33 focuses specifically on breach notification, which is one aspect of incident response."
+    },
+    {
+      "mapping_id": "MAP-DP-01",
+      "control_domain": "Data Protection",
+      "unified_objective": "Protect personal and sensitive data through appropriate technical and organisational measures, including encryption, access controls, and privacy-by-design principles.",
+      "mapped_requirements": [
+        { "requirement_id": "GDPR-ART5", "source_standard": "GDPR", "relationship": "equivalent" },
+        { "requirement_id": "GDPR-ART25", "source_standard": "GDPR", "relationship": "equivalent" },
+        { "requirement_id": "GDPR-ART32", "source_standard": "GDPR", "relationship": "equivalent" },
+        { "requirement_id": "ISO27001-A8.5", "source_standard": "ISO/IEC 27001:2022", "relationship": "complementary" }
+      ],
+      "notes": "ISO 27001 access control supports GDPR data protection but is not solely focused on personal data."
+    },
+    {
+      "mapping_id": "MAP-RM-01",
+      "control_domain": "Risk Management",
+      "unified_objective": "Establish risk management processes including risk identification, assessment, treatment, and regular review.",
+      "mapped_requirements": [
+        { "requirement_id": "NIST-GV.RM-01", "source_standard": "NIST CSF 2.0", "relationship": "equivalent" },
+        { "requirement_id": "GDPR-ART35", "source_standard": "GDPR", "relationship": "overlapping" }
+      ],
+      "notes": "GDPR DPIA is a specific type of risk assessment focused on data protection impact."
+    },
+    {
+      "mapping_id": "MAP-PM-01",
+      "control_domain": "Patch Management",
+      "unified_objective": "Identify and remediate technical vulnerabilities in a timely manner through patch management and secure configuration.",
+      "mapped_requirements": [
+        { "requirement_id": "ISO27001-A8.8", "source_standard": "ISO/IEC 27001:2022", "relationship": "equivalent" },
+        { "requirement_id": "NIST-ID.RA-01", "source_standard": "NIST CSF 2.0", "relationship": "overlapping" },
+        { "requirement_id": "CE-SC-01", "source_standard": "Cyber Essentials", "relationship": "overlapping" },
+        { "requirement_id": "CE-PM-01", "source_standard": "Cyber Essentials", "relationship": "equivalent" }
+      ],
+      "notes": "NIST ID.RA-01 covers vulnerability identification; CE-PM-01 focuses on patching timelines."
+    },
+    {
+      "mapping_id": "MAP-NS-01",
+      "control_domain": "Network Security",
+      "unified_objective": "Protect network boundaries and monitor network activity to detect and prevent adverse events.",
+      "mapped_requirements": [
+        { "requirement_id": "ISO27001-A8.1", "source_standard": "ISO/IEC 27001:2022", "relationship": "overlapping" },
+        { "requirement_id": "NIST-DE.CM-01", "source_standard": "NIST CSF 2.0", "relationship": "equivalent" },
+        { "requirement_id": "CE-FW-01", "source_standard": "Cyber Essentials", "relationship": "overlapping" }
+      ],
+      "notes": "ISO A8.1 focuses on endpoint devices; NIST DE.CM-01 on network monitoring; CE-FW-01 on boundary firewalls."
+    },
+    {
+      "mapping_id": "MAP-SG-01",
+      "control_domain": "Security Governance",
+      "unified_objective": "Establish, communicate, and maintain information security policies approved by management.",
+      "mapped_requirements": [
+        { "requirement_id": "ISO27001-A5.1", "source_standard": "ISO/IEC 27001:2022", "relationship": "equivalent" },
+        { "requirement_id": "NIST-GV.PO-01", "source_standard": "NIST CSF 2.0", "relationship": "equivalent" },
+        { "requirement_id": "ISO27001-A5.5", "source_standard": "ISO/IEC 27001:2022", "relationship": "complementary" }
+      ],
+      "notes": "Both ISO A5.1 and NIST GV.PO-01 address the establishment of cybersecurity policies."
+    },
+    {
+      "mapping_id": "MAP-AT-01",
+      "control_domain": "Awareness and Training",
+      "unified_objective": "Ensure personnel receive appropriate cybersecurity awareness training and education.",
+      "mapped_requirements": [
+        { "requirement_id": "ISO27001-A6.3", "source_standard": "ISO/IEC 27001:2022", "relationship": "equivalent" },
+        { "requirement_id": "NIST-PR.AT-01", "source_standard": "NIST CSF 2.0", "relationship": "equivalent" }
+      ],
+      "notes": "Both standards require awareness and training programmes for personnel."
+    }
+  ]
+}

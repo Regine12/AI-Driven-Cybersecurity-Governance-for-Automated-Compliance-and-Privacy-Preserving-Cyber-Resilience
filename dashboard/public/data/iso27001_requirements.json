@@ -1,0 +1,87 @@
+{
+  "standard": "ISO/IEC 27001:2022",
+  "version": "2022",
+  "description": "Selected Annex A controls from ISO/IEC 27001:2022, covering key governance domains.",
+  "requirements": [
+    {
+      "requirement_id": "ISO27001-A5.1",
+      "source_standard": "ISO/IEC 27001:2022",
+      "clause_reference": "Annex A 5.1",
+      "title": "Policies for information security",
+      "description": "An information security policy and topic-specific policies shall be defined, approved by management, published, communicated to and acknowledged by relevant personnel and relevant interested parties, and reviewed at planned intervals or if significant changes occur.",
+      "control_domain": "Security Governance",
+      "expected_evidence": ["policy_document", "approval_record", "communication_log"],
+      "priority": "high"
+    },
+    {
+      "requirement_id": "ISO27001-A5.10",
+      "source_standard": "ISO/IEC 27001:2022",
+      "clause_reference": "Annex A 5.10",
+      "title": "Acceptable use of information and other associated assets",
+      "description": "Rules for the acceptable use of information and other associated assets shall be identified, documented and implemented.",
+      "control_domain": "Asset Management",
+      "expected_evidence": ["acceptable_use_policy", "asset_register"],
+      "priority": "medium"
+    },
+    {
+      "requirement_id": "ISO27001-A8.1",
+      "source_standard": "ISO/IEC 27001:2022",
+      "clause_reference": "Annex A 8.1",
+      "title": "User endpoint devices",
+      "description": "Information stored on, processed by or accessible via user endpoint devices shall be protected.",
+      "control_domain": "Network Security",
+      "expected_evidence": ["endpoint_policy", "configuration_record", "encryption_status"],
+      "priority": "high"
+    },
+    {
+      "requirement_id": "ISO27001-A5.24",
+      "source_standard": "ISO/IEC 27001:2022",
+      "clause_reference": "Annex A 5.24",
+      "title": "Information security incident management planning and preparation",
+      "description": "The organisation shall plan and prepare for managing information security incidents by defining, establishing and communicating incident management processes, roles and responsibilities.",
+      "control_domain": "Incident Response",
+      "expected_evidence": ["incident_response_plan", "role_assignment_record", "communication_procedure"],
+      "priority": "high"
+    },
+    {
+      "requirement_id": "ISO27001-A8.5",
+      "source_standard": "ISO/IEC 27001:2022",
+      "clause_reference": "Annex A 8.5",
+      "title": "Secure authentication",
+      "description": "Secure authentication technologies and procedures shall be established and implemented based on information access restrictions and the topic-specific policy on access control.",
+      "control_domain": "Access Control",
+      "expected_evidence": ["authentication_policy", "mfa_configuration", "access_log_sample"],
+      "priority": "high"
+    },
+    {
+      "requirement_id": "ISO27001-A8.8",
+      "source_standard": "ISO/IEC 27001:2022",
+      "clause_reference": "Annex A 8.8",
+      "title": "Management of technical vulnerabilities",
+      "description": "Information about technical vulnerabilities of information systems in use shall be obtained, the organisation's exposure to such vulnerabilities shall be evaluated, and appropriate measures shall be taken.",
+      "control_domain": "Patch Management",
+      "expected_evidence": ["vulnerability_scan_report", "patch_log", "remediation_record"],
+      "priority": "high"
+    },
+    {
+      "requirement_id": "ISO27001-A5.5",
+      "source_standard": "ISO/IEC 27001:2022",
+      "clause_reference": "Annex A 5.5",
+      "title": "Contact with authorities",
+      "description": "The organisation shall establish and maintain contact with relevant authorities.",
+      "control_domain": "Security Governance",
+      "expected_evidence": ["authority_contact_register", "communication_log"],
+      "priority": "medium"
+    },
+    {
+      "requirement_id": "ISO27001-A6.3",
+      "source_standard": "ISO/IEC 27001:2022",
+      "clause_reference": "Annex A 6.3",
+      "title": "Information security awareness, education and training",
+      "description": "Personnel of the organisation and relevant interested parties shall receive appropriate information security awareness, education and training and regular updates of the organisation's information security policy.",
+      "control_domain": "Awareness and Training",
+      "expected_evidence": ["training_records", "awareness_programme", "completion_log"],
+      "priority": "medium"
+    }
+  ]
+}
