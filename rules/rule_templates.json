@@ -1,0 +1,103 @@
+{
+  "description": "Rule templates for automated compliance evaluation. Each rule defines conditions that evidence must satisfy for a requirement to be considered compliant.",
+  "rules": [
+    {
+      "rule_id": "RULE-AC-01",
+      "name": "Access control policy and MFA verification",
+      "control_domain": "Access Control",
+      "target_requirement_ids": ["ISO27001-A8.5", "NIST-PR.AA-01", "CE-AC-01"],
+      "description": "Verify that an access control policy exists, is approved, and that MFA is enabled with adequate coverage.",
+      "conditions": [
+        { "field": "policy_approved", "operator": "equals", "value": true },
+        { "field": "mfa_enabled", "operator": "equals", "value": true },
+        { "field": "mfa_coverage_percent", "operator": "greater_than_or_equal", "value": 90 }
+      ],
+      "full_compliance_threshold": "all_conditions_met",
+      "partial_compliance_threshold": "any_condition_met"
+    },
+    {
+      "rule_id": "RULE-IR-01",
+      "name": "Incident response plan and testing",
+      "control_domain": "Incident Response",
+      "target_requirement_ids": ["ISO27001-A5.24", "NIST-RS.MA-01"],
+      "description": "Verify that an incident response plan exists, defines roles, and has been tested within the last 12 months.",
+      "conditions": [
+        { "field": "plan_exists", "operator": "equals", "value": true },
+        { "field": "roles_defined", "operator": "equals", "value": true },
+        { "field": "tested_in_last_12_months", "operator": "equals", "value": true }
+      ],
+      "full_compliance_threshold": "all_conditions_met",
+      "partial_compliance_threshold": "any_condition_met"
+    },
+    {
+      "rule_id": "RULE-IR-02",
+      "name": "Breach notification compliance",
+      "control_domain": "Incident Response",
+      "target_requirement_ids": ["GDPR-ART33"],
+      "description": "Verify that breach notification procedures exist and that notifications are made within the 72-hour window.",
+      "conditions": [
+        { "field": "covers_breach_notification", "operator": "equals", "value": true },
+        { "field": "notification_timeline_hours", "operator": "less_than_or_equal", "value": 72 },
+        { "field": "notification_within_72h", "operator": "equals", "value": true }
+      ],
+      "full_compliance_threshold": "all_conditions_met",
+      "partial_compliance_threshold": "any_condition_met"
+    },
+    {
+      "rule_id": "RULE-DP-01",
+      "name": "Data processing register and privacy policy",
+      "control_domain": "Data Protection",
+      "target_requirement_ids": ["GDPR-ART5", "GDPR-ART25"],
+      "description": "Verify that a data processing register exists, legal bases are recorded, and a privacy policy is published.",
+      "conditions": [
+        { "field": "register_exists", "operator": "equals", "value": true },
+        { "field": "legal_bases_recorded", "operator": "equals", "value": true },
+        { "field": "retention_periods_defined", "operator": "equals", "value": true },
+        { "field": "privacy_policy_published", "operator": "equals", "value": true }
+      ],
+      "full_compliance_threshold": "all_conditions_met",
+      "partial_compliance_threshold": "any_condition_met"
+    },
+    {
+      "rule_id": "RULE-DP-02",
+      "name": "Encryption coverage",
+      "control_domain": "Data Protection",
+      "target_requirement_ids": ["GDPR-ART32"],
+      "description": "Verify that encryption is applied to data at rest and in transit with adequate coverage.",
+      "conditions": [
+        { "field": "encryption_at_rest", "operator": "equals", "value": true },
+        { "field": "encryption_in_transit", "operator": "equals", "value": true },
+        { "field": "encryption_coverage_percent", "operator": "greater_than_or_equal", "value": 95 }
+      ],
+      "full_compliance_threshold": "all_conditions_met",
+      "partial_compliance_threshold": "any_condition_met"
+    },
+    {
+      "rule_id": "RULE-RM-01",
+      "name": "Risk management process",
+      "control_domain": "Risk Management",
+      "target_requirement_ids": ["NIST-GV.RM-01"],
+      "description": "Verify that a risk register exists and that all identified risks have treatment plans.",
+      "conditions": [
+        { "field": "risk_register_exists", "operator": "equals", "value": true },
+        { "field": "risks_without_treatment", "operator": "equals", "value": 0 }
+      ],
+      "full_compliance_threshold": "all_conditions_met",
+      "partial_compliance_threshold": "any_condition_met"
+    },
+    {
+      "rule_id": "RULE-RM-02",
+      "name": "DPIA completion and mitigation",
+      "control_domain": "Risk Management",
+      "target_requirement_ids": ["GDPR-ART35"],
+      "description": "Verify that DPIAs are completed for high-risk processing and that recommended mitigations are implemented.",
+      "conditions": [
+        { "field": "dpia_completed", "operator": "equals", "value": true },
+        { "field": "mitigations_recommended", "operator": "equals", "value": true },
+        { "field": "mitigations_implemented", "operator": "equals", "value": true }
+      ],
+      "full_compliance_threshold": "all_conditions_met",
+      "partial_compliance_threshold": "any_condition_met"
+    }
+  ]
+}

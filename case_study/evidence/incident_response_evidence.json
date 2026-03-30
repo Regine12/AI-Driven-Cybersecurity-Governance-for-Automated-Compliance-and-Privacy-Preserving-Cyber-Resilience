@@ -1,0 +1,33 @@
+{
+  "evidence_id": "EV-IR-001",
+  "control_domain": "Incident Response",
+  "related_requirement_ids": ["ISO27001-A5.24", "NIST-RS.MA-01", "GDPR-ART33"],
+  "evidence_type": "incident_response_plan",
+  "submitted_date": "2026-03-10",
+  "artefacts": [
+    {
+      "name": "Incident Response Plan v1.8",
+      "content_summary": "Documented incident response plan covering identification, containment, eradication, recovery, and lessons learned. Includes GDPR breach notification procedures with 72-hour timeline.",
+      "properties": {
+        "plan_exists": true,
+        "last_review_date": "2025-11-20",
+        "covers_breach_notification": true,
+        "notification_timeline_hours": 72,
+        "roles_defined": true,
+        "tested_in_last_12_months": true
+      }
+    },
+    {
+      "name": "Incident Log – 2025/2026",
+      "content_summary": "Log of 7 security incidents recorded in the past 12 months. All incidents were classified, investigated, and closed. Average response time: 4.2 hours.",
+      "properties": {
+        "total_incidents": 7,
+        "incidents_resolved": 7,
+        "average_response_hours": 4.2,
+        "breach_notifications_made": 1,
+        "notification_within_72h": true
+      }
+    }
+  ],
+  "notes": "Synthetic evidence. Plan was last tested via tabletop exercise in November 2025."
+}

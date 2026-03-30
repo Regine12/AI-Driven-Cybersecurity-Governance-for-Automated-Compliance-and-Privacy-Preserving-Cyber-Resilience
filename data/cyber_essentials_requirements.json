@@ -1,0 +1,57 @@
+{
+  "standard": "Cyber Essentials",
+  "version": "Montpelier (2022)",
+  "description": "Selected controls from the UK Cyber Essentials scheme, covering baseline security requirements.",
+  "requirements": [
+    {
+      "requirement_id": "CE-FW-01",
+      "source_standard": "Cyber Essentials",
+      "clause_reference": "Firewalls",
+      "title": "Boundary firewalls and internet gateways",
+      "description": "A firewall shall be configured to protect all devices, particularly those that connect to public or untrusted networks.",
+      "control_domain": "Network Security",
+      "expected_evidence": ["firewall_policy", "configuration_record"],
+      "priority": "high"
+    },
+    {
+      "requirement_id": "CE-SC-01",
+      "source_standard": "Cyber Essentials",
+      "clause_reference": "Secure Configuration",
+      "title": "Secure configuration of devices",
+      "description": "Computers and network devices shall be configured to reduce vulnerabilities and provide only the services required to fulfil their role.",
+      "control_domain": "Patch Management",
+      "expected_evidence": ["configuration_record", "hardening_checklist"],
+      "priority": "high"
+    },
+    {
+      "requirement_id": "CE-AC-01",
+      "source_standard": "Cyber Essentials",
+      "clause_reference": "Access Control",
+      "title": "User access control",
+      "description": "User accounts and access privileges shall be managed to ensure only authorised individuals access systems and data.",
+      "control_domain": "Access Control",
+      "expected_evidence": ["access_log_sample", "user_account_review", "authentication_policy"],
+      "priority": "high"
+    },
+    {
+      "requirement_id": "CE-MP-01",
+      "source_standard": "Cyber Essentials",
+      "clause_reference": "Malware Protection",
+      "title": "Malware protection",
+      "description": "Malware protection shall be implemented and kept up to date across all devices.",
+      "control_domain": "Malware Protection",
+      "expected_evidence": ["antimalware_status", "update_log"],
+      "priority": "high"
+    },
+    {
+      "requirement_id": "CE-PM-01",
+      "source_standard": "Cyber Essentials",
+      "clause_reference": "Patch Management",
+      "title": "Security update management",
+      "description": "Software shall be kept up to date with security patches applied within 14 days of release for critical/high-risk vulnerabilities.",
+      "control_domain": "Patch Management",
+      "expected_evidence": ["patch_log", "vulnerability_scan_report"],
+      "priority": "high"
+    }
+  ]
+}

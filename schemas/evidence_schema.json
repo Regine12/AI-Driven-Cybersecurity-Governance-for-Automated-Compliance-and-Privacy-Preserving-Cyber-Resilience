@@ -1,0 +1,71 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Compliance Evidence",
+  "description": "Schema for a synthetic evidence artefact submitted against one or more requirements.",
+  "type": "object",
+  "required": ["evidence_id", "control_domain", "evidence_type", "submitted_date", "artefacts"],
+  "properties": {
+    "evidence_id": {
+      "type": "string",
+      "description": "Unique identifier for this evidence submission (e.g., EV-AC-001)."
+    },
+    "control_domain": {
+      "type": "string",
+      "enum": [
+        "Access Control",
+        "Incident Response",
+        "Data Protection",
+        "Risk Management",
+        "Asset Management",
+        "Security Governance",
+        "Network Security",
+        "Malware Protection",
+        "Patch Management",
+        "Awareness and Training"
+      ]
+    },
+    "related_requirement_ids": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Requirement IDs this evidence is intended to satisfy."
+    },
+    "evidence_type": {
+      "type": "string",
+      "description": "Category of evidence (e.g., policy_document, log_sample, configuration_record)."
+    },
+    "submitted_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date the evidence was submitted (ISO 8601)."
+    },
+    "artefacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "content_summary"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the evidence artefact."
+          },
+          "content_summary": {
+            "type": "string",
+            "description": "Brief summary of the artefact contents."
+          },
+          "properties": {
+            "type": "object",
+            "description": "Key-value pairs representing measurable or checkable attributes.",
+            "additionalProperties": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "notes": {
+      "type": "string",
+      "description": "Optional notes about the evidence."
+    }
+  },
+  "additionalProperties": false
+}

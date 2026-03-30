@@ -1,0 +1,87 @@
+{
+  "standard": "NIST CSF 2.0",
+  "version": "2.0",
+  "description": "Selected subcategories from the NIST Cybersecurity Framework 2.0, spanning Govern, Identify, Protect, Detect, Respond, and Recover functions.",
+  "requirements": [
+    {
+      "requirement_id": "NIST-GV.PO-01",
+      "source_standard": "NIST CSF 2.0",
+      "clause_reference": "GV.PO-01",
+      "title": "Cybersecurity policy established",
+      "description": "A policy for managing cybersecurity risks is established based on organisational context, cybersecurity strategy, and priorities and is communicated and enforced.",
+      "control_domain": "Security Governance",
+      "expected_evidence": ["policy_document", "approval_record", "communication_log"],
+      "priority": "high"
+    },
+    {
+      "requirement_id": "NIST-ID.AM-01",
+      "source_standard": "NIST CSF 2.0",
+      "clause_reference": "ID.AM-01",
+      "title": "Asset inventories maintained",
+      "description": "Inventories of hardware managed by the organisation are maintained.",
+      "control_domain": "Asset Management",
+      "expected_evidence": ["asset_register", "inventory_report"],
+      "priority": "high"
+    },
+    {
+      "requirement_id": "NIST-PR.AA-01",
+      "source_standard": "NIST CSF 2.0",
+      "clause_reference": "PR.AA-01",
+      "title": "Identity and credential management",
+      "description": "Identities and credentials for authorised users, services, and hardware are managed by the organisation.",
+      "control_domain": "Access Control",
+      "expected_evidence": ["authentication_policy", "mfa_configuration", "access_log_sample"],
+      "priority": "high"
+    },
+    {
+      "requirement_id": "NIST-PR.AT-01",
+      "source_standard": "NIST CSF 2.0",
+      "clause_reference": "PR.AT-01",
+      "title": "Awareness and training provided",
+      "description": "Personnel are provided cybersecurity awareness and training so that they can perform their cybersecurity-related tasks.",
+      "control_domain": "Awareness and Training",
+      "expected_evidence": ["training_records", "awareness_programme"],
+      "priority": "medium"
+    },
+    {
+      "requirement_id": "NIST-DE.CM-01",
+      "source_standard": "NIST CSF 2.0",
+      "clause_reference": "DE.CM-01",
+      "title": "Networks monitored for anomalies",
+      "description": "Networks and network services are monitored to find potentially adverse events.",
+      "control_domain": "Network Security",
+      "expected_evidence": ["monitoring_log", "alert_configuration", "siem_report"],
+      "priority": "high"
+    },
+    {
+      "requirement_id": "NIST-RS.MA-01",
+      "source_standard": "NIST CSF 2.0",
+      "clause_reference": "RS.MA-01",
+      "title": "Incident management executed",
+      "description": "The incident response plan is executed in coordination with relevant third parties once an incident is declared.",
+      "control_domain": "Incident Response",
+      "expected_evidence": ["incident_response_plan", "incident_log", "post_incident_review"],
+      "priority": "high"
+    },
+    {
+      "requirement_id": "NIST-ID.RA-01",
+      "source_standard": "NIST CSF 2.0",
+      "clause_reference": "ID.RA-01",
+      "title": "Vulnerabilities identified",
+      "description": "Vulnerabilities in assets are identified, validated, and recorded.",
+      "control_domain": "Patch Management",
+      "expected_evidence": ["vulnerability_scan_report", "patch_log"],
+      "priority": "high"
+    },
+    {
+      "requirement_id": "NIST-GV.RM-01",
+      "source_standard": "NIST CSF 2.0",
+      "clause_reference": "GV.RM-01",
+      "title": "Risk management objectives established",
+      "description": "Risk management objectives are established and agreed to by organisational stakeholders.",
+      "control_domain": "Risk Management",
+      "expected_evidence": ["risk_register", "risk_policy", "risk_assessment_report"],
+      "priority": "high"
+    }
+  ]
+}

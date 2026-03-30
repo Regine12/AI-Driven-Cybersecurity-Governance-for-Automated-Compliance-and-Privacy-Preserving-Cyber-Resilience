@@ -1,0 +1,41 @@
+{
+  "evidence_id": "EV-DP-001",
+  "control_domain": "Data Protection",
+  "related_requirement_ids": ["GDPR-ART5", "GDPR-ART25", "GDPR-ART32"],
+  "evidence_type": "data_processing_register",
+  "submitted_date": "2026-03-10",
+  "artefacts": [
+    {
+      "name": "Data Processing Register",
+      "content_summary": "Register of all personal data processing activities, including purposes, legal bases, data categories, recipients, retention periods, and security measures.",
+      "properties": {
+        "register_exists": true,
+        "processing_activities_documented": 23,
+        "legal_bases_recorded": true,
+        "retention_periods_defined": true,
+        "last_updated": "2026-02-01"
+      }
+    },
+    {
+      "name": "Privacy Policy (Public-Facing)",
+      "content_summary": "Published privacy policy available on the organisation's website, covering data subjects' rights, data processing purposes, and contact details for the DPO.",
+      "properties": {
+        "privacy_policy_published": true,
+        "dpo_contact_listed": true,
+        "last_updated": "2025-12-15"
+      }
+    },
+    {
+      "name": "Encryption Status Report",
+      "content_summary": "Report on encryption implementation: AES-256 for data at rest, TLS 1.3 for data in transit. 85% of databases encrypted; customer billing database pending encryption upgrade.",
+      "properties": {
+        "encryption_at_rest": true,
+        "encryption_in_transit": true,
+        "encryption_coverage_percent": 85,
+        "encryption_standard": "AES-256 / TLS 1.3",
+        "gaps_identified": "Customer billing database pending upgrade"
+      }
+    }
+  ],
+  "notes": "Synthetic evidence. Encryption gap in billing database represents a deliberate partial-compliance scenario."
+}

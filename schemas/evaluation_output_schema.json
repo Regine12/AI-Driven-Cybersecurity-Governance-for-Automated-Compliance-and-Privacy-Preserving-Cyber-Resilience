@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Compliance Evaluation Output",
+  "description": "Schema for the result of evaluating a requirement against submitted evidence.",
+  "type": "object",
+  "required": ["evaluation_id", "requirement_id", "source_standard", "control_domain", "status", "evaluated_at"],
+  "properties": {
+    "evaluation_id": {
+      "type": "string",
+      "description": "Unique identifier for this evaluation result."
+    },
+    "requirement_id": {
+      "type": "string",
+      "description": "The requirement that was evaluated."
+    },
+    "source_standard": {
+      "type": "string",
+      "enum": ["ISO/IEC 27001:2022", "NIST CSF 2.0", "Cyber Essentials", "GDPR"]
+    },
+    "control_domain": {
+      "type": "string"
+    },
+    "mapping_id": {
+      "type": "string",
+      "description": "Cross-standard mapping group this evaluation relates to (if applicable)."
+    },
+    "status": {
+      "type": "string",
+      "enum": ["compliant", "partially_compliant", "non_compliant", "not_assessed"],
+      "description": "Compliance determination."
+    },
+    "matched_evidence_ids": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Evidence IDs that were matched to this requirement."
+    },
+    "missing_evidence": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Expected evidence types that were not found."
+    },
+    "rule_id": {
+      "type": "string",
+      "description": "The rule that produced this evaluation."
+    },
+    "details": {
+      "type": "string",
+      "description": "Human-readable explanation of the evaluation outcome."
+    },
+    "evaluated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp of evaluation (ISO 8601)."
+    }
+  },
+  "additionalProperties": false
+}

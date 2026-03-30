@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Cross-Standard Control Mapping",
+  "description": "Schema for mapping related controls across ISO 27001, NIST CSF 2.0, Cyber Essentials, and GDPR.",
+  "type": "object",
+  "required": ["mapping_id", "control_domain", "unified_objective", "mapped_requirements"],
+  "properties": {
+    "mapping_id": {
+      "type": "string",
+      "description": "Unique identifier for this mapping group (e.g., MAP-AC-01)."
+    },
+    "control_domain": {
+      "type": "string",
+      "enum": [
+        "Access Control",
+        "Incident Response",
+        "Data Protection",
+        "Risk Management",
+        "Asset Management",
+        "Security Governance",
+        "Network Security",
+        "Malware Protection",
+        "Patch Management",
+        "Awareness and Training"
+      ],
+      "description": "The governance domain this mapping covers."
+    },
+    "unified_objective": {
+      "type": "string",
+      "description": "A synthesised control objective that captures the shared intent across the mapped requirements."
+    },
+    "mapped_requirements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["requirement_id", "source_standard"],
+        "properties": {
+          "requirement_id": {
+            "type": "string",
+            "description": "Requirement ID from the source standard."
+          },
+          "source_standard": {
+            "type": "string",
+            "enum": ["ISO/IEC 27001:2022", "NIST CSF 2.0", "Cyber Essentials", "GDPR"]
+          },
+          "relationship": {
+            "type": "string",
+            "enum": ["equivalent", "overlapping", "complementary"],
+            "description": "How this requirement relates to the unified objective."
+          }
+        },
+        "additionalProperties": false
+      },
+      "minItems": 2,
+      "description": "The set of requirements from different standards that map to this unified objective."
+    },
+    "notes": {
+      "type": "string",
+      "description": "Optional commentary on the mapping rationale."
+    }
+  },
+  "additionalProperties": false
+}

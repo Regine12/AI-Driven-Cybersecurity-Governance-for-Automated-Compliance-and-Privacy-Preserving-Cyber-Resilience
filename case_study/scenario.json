@@ -1,0 +1,37 @@
+{
+  "scenario_id": "CS-ENERGY-01",
+  "title": "Regional Energy Distribution Utility – Simulated Case Study",
+  "description": "A simulated mid-sized regional energy distribution utility operating critical infrastructure for electricity distribution across a metropolitan area. The organisation processes personal data of approximately 150,000 residential and commercial customers and operates both IT and OT (operational technology) environments.",
+  "sector": "Energy / Critical Infrastructure",
+  "organisation_profile": {
+    "name": "NorthGrid Energy Distribution Ltd (Simulated)",
+    "employees": 420,
+    "it_systems": 35,
+    "ot_systems": 12,
+    "data_subjects": 150000,
+    "geographic_scope": "United Kingdom (simulated)",
+    "regulatory_environment": ["ISO/IEC 27001:2022", "NIST CSF 2.0", "Cyber Essentials", "GDPR"]
+  },
+  "scope_of_assessment": {
+    "description": "The assessment covers the organisation's IT governance environment, focusing on corporate IT systems (not OT/SCADA). The scope includes access management, incident response capabilities, data protection practices, vulnerability management, and security governance.",
+    "domains_in_scope": [
+      "Access Control",
+      "Incident Response",
+      "Data Protection",
+      "Risk Management",
+      "Patch Management",
+      "Network Security",
+      "Security Governance",
+      "Awareness and Training",
+      "Asset Management",
+      "Malware Protection"
+    ],
+    "exclusions": [
+      "OT/SCADA-specific controls (out of scope for this prototype)",
+      "Physical security controls",
+      "Supply chain security (beyond basic vendor risk)"
+    ]
+  },
+  "assessment_date": "2026-03-15",
+  "notes": "All data in this case study is synthetic and created for thesis demonstration purposes only. No real organisation or individual is represented."
+}

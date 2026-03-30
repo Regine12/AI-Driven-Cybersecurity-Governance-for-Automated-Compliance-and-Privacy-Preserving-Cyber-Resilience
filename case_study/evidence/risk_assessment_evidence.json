@@ -1,0 +1,32 @@
+{
+  "evidence_id": "EV-RM-001",
+  "control_domain": "Risk Management",
+  "related_requirement_ids": ["NIST-GV.RM-01", "GDPR-ART35"],
+  "evidence_type": "risk_assessment_report",
+  "submitted_date": "2026-03-10",
+  "artefacts": [
+    {
+      "name": "Risk Register – Q1 2026",
+      "content_summary": "Organisation-wide risk register containing 18 identified cybersecurity risks, each rated by likelihood and impact, with assigned owners and treatment plans.",
+      "properties": {
+        "risk_register_exists": true,
+        "total_risks_identified": 18,
+        "risks_with_treatment_plan": 16,
+        "risks_without_treatment": 2,
+        "last_review_date": "2026-01-30"
+      }
+    },
+    {
+      "name": "DPIA – Customer Data Platform",
+      "content_summary": "Data Protection Impact Assessment for the new customer data analytics platform. Identifies high-risk processing of customer energy usage patterns and recommends pseudonymisation.",
+      "properties": {
+        "dpia_completed": true,
+        "high_risk_processing_identified": true,
+        "mitigations_recommended": true,
+        "mitigations_implemented": false,
+        "completion_date": "2025-10-15"
+      }
+    }
+  ],
+  "notes": "Synthetic evidence. DPIA mitigations not yet implemented — represents a gap for evaluation purposes."
+}

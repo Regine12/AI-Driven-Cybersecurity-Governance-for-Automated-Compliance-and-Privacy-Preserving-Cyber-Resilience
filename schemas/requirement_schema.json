@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Governance Requirement",
+  "description": "Schema for an individual regulatory or standards-based requirement.",
+  "type": "object",
+  "required": ["requirement_id", "source_standard", "title", "description", "control_domain", "expected_evidence"],
+  "properties": {
+    "requirement_id": {
+      "type": "string",
+      "description": "Unique identifier scoped to the source standard (e.g., ISO27001-A5.1, NIST-PR.AC-01)."
+    },
+    "source_standard": {
+      "type": "string",
+      "enum": ["ISO/IEC 27001:2022", "NIST CSF 2.0", "Cyber Essentials", "GDPR"],
+      "description": "The originating standard or regulation."
+    },
+    "clause_reference": {
+      "type": "string",
+      "description": "Official clause, annex, or article number in the source document."
+    },
+    "title": {
+      "type": "string",
+      "description": "Short human-readable title of the requirement."
+    },
+    "description": {
+      "type": "string",
+      "description": "Plain-language summary of what the requirement mandates."
+    },
+    "control_domain": {
+      "type": "string",
+      "enum": [
+        "Access Control",
+        "Incident Response",
+        "Data Protection",
+        "Risk Management",
+        "Asset Management",
+        "Security Governance",
+        "Network Security",
+        "Malware Protection",
+        "Patch Management",
+        "Awareness and Training"
+      ],
+      "description": "Governance domain this requirement belongs to (used for cross-standard mapping)."
+    },
+    "expected_evidence": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1,
+      "description": "Types of evidence that could demonstrate compliance with this requirement."
+    },
+    "priority": {
+      "type": "string",
+      "enum": ["high", "medium", "low"],
+      "description": "Indicative priority for governance purposes."
+    }
+  },
+  "additionalProperties": false
+}
